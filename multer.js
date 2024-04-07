@@ -98,8 +98,8 @@ if (req.files && req.files.image_three) {
 const data = {
     productName: productName,
     price: price,
-    name: name,
     image_one: imageOnePath,
     image_two: imageTwoPath,
     image_three: imageThreePath
 };
+
