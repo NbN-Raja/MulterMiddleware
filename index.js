@@ -56,6 +56,7 @@ const processImage = async (file, folderName, imageName, outputFormat) => {
     }
 };
 
+module.exports= {processImage}
 
 // *************************************************************************************************************
 
@@ -74,6 +75,8 @@ router.post('/product', ProductImage.fields(imageFields), productController.post
 // ***************************************************************************************************************8
 
 // In the controller use this to get for single images
+
+
 let imageOnePath = null;
 if (req.files && req.files.image_one) {
     imageOnePath = await processImage(req.files.image_one[0], 'product', 'image_one', 'jpeg');
